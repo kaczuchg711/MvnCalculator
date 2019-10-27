@@ -1,2 +1,2 @@
 mvn clean install
-java -jar Common/target/*.  jar
+java -jar Common/target/Common*.jar
