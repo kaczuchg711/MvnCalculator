@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>pl.c0.kaczuch.calculator</groupId>
-            <artifactId>III</artifactId>
+            <artifactId>Interface</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
