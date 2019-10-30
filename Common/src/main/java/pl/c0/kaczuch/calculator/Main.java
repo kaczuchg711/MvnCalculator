@@ -9,8 +9,6 @@ public class Main
     {
         System.out.println("Main");
         IIICalculator cal = new CCCalculator();
-
         cal.run(cal);
-
     }
 }
