@@ -1,6 +1,7 @@
 package pl.c0.kaczuch.calculator;
 
 import java.util.Calendar;
+import java.util.Scanner;
 
 public class Main
 {
@@ -8,6 +9,8 @@ public class Main
     {
         System.out.println("Main");
         IIICalculator cal = new CCCalculator();
-        System.out.println(cal.add(1,2));
+
+        cal.run(cal);
+
     }
 }
