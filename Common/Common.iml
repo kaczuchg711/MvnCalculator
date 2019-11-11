@@ -7,6 +7,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <content url="file://$MODULE_DIR$/../Implementation/target/classes">
+      <sourceFolder url="file://$MODULE_DIR$/../Implementation/target/classes" type="java-resource" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Interface/target/classes">
+      <sourceFolder url="file://$MODULE_DIR$/../Interface/target/classes" type="java-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Interface" />
