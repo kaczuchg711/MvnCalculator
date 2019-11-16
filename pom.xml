@@ -12,9 +12,11 @@
 
 
     <modules>
+        <module>Plugin</module>
         <module>Interface</module>
         <module>Implementation</module>
         <module>Common</module>
+
     </modules>
 
     <properties>

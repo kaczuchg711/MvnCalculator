@@ -1,5 +1,9 @@
 package pl.c0.kaczuch.calculator;
 
+import pl.c0.kaczuch.calculator.Plugin;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class CCCalculator implements IIICalculator
@@ -26,6 +30,15 @@ public class CCCalculator implements IIICalculator
     public double division(double a, double b)
     {
         return a / b;
+    }
+
+    public double sqrt(double a) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException
+    {
+        ClassLoader cl = ClassLoader.getSystemClassLoader();
+        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
+        Constructor<Plugin> pconstructor = pclass.getConstructor();
+        Plugin p = pconstructor.newInstance();
+        return p.sqrt(a);
     }
 
     @Override
@@ -78,4 +91,5 @@ public class CCCalculator implements IIICalculator
 
         }
     }
+
 }
