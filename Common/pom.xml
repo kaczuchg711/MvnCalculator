@@ -64,6 +64,9 @@
             <resource>
                 <directory>../Implementation/target/classes/</directory>
             </resource>
+            <resource>
+                <directory>../Plugin/target/classes</directory>
+            </resource>
         </resources>
 
 
