@@ -14,12 +14,11 @@ public class Main
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException
     {
-//        
-        System.out.println("Main");
 
-        CCCalculator c = new CCCalculator();
-        System.out.println("1");
-        System.out.println(c.sqrt(4));
+//        w CCCalculator
+//        CCCalculator c = new CCCalculator();
+//        System.out.println("1");
+//        System.out.println(c.sqrt(4));
 
 //        String current = new java.io.File(".").getCanonicalPath();
 //        System.out.println(current);
@@ -39,11 +38,13 @@ public class Main
 //
 //        System.out.println(mysqrt.);
 
-//        ClassLoader cl = ClassLoader.getSystemClassLoader();
-//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.plugins.Plugin");
-//        Constructor<Plugin> pconstructor = pclass.getConstructor();
-//        Plugin p = pconstructor.newInstance();
-//        System.out.println(p.sqrt(2));
+
+//        w main
+        ClassLoader cl = ClassLoader.getSystemClassLoader();
+        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
+        Constructor<Plugin> pconstructor = pclass.getConstructor();
+        Plugin p = pconstructor.newInstance();
+        System.out.println(p.sqrt(2));
 
 
 
