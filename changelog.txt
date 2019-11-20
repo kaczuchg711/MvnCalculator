@@ -2,7 +2,10 @@ CHANGELOG - ARTUR HAŁAT,TOMASZ KACZA         TO
 
 
 brach master - orginal MVN Calcuator 
-
+    ->In Interface module is interface IIICalculator
+    ->In Implementation module is class CCCalculator
+    ->In Common module Main
+    ->In Plugin Module class Plugin with additional method sqrt
 
 branch devArt:
 [* 18.11.2019 *]
@@ -16,5 +19,7 @@ elements of program:
 
 
 
-bramch devT
+branch devT
 [* 19.11.2019 *]
+    Quick description of changes:
+    	start using sqrt as a method
