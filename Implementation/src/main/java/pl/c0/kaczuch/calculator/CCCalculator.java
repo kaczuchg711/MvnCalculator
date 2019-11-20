@@ -1,9 +1,7 @@
 package pl.c0.kaczuch.calculator;
 
-import pl.c0.kaczuch.calculator.Plugin;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class CCCalculator implements IIICalculator
