@@ -1,6 +1,8 @@
 package pl.c0.kaczuch.calculator;
 
 
+import pl.c0.kaczuch.calculator.P.PPlugin;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -40,11 +42,24 @@ public class Main
 
 
 //        w main
+//        ClassLoader cl = ClassLoader.getSystemClassLoader();
+//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
+//        Method m = pclass.getMethods()[0];
+//        System.out.println(m.getName());
+//        Constructor<Plugin> pconstructor = pclass.getConstructor();
+//        Plugin p = pconstructor.newInstance();
+//        System.out.println(p.sqrt(2));
+
+//        z katalogu
         ClassLoader cl = ClassLoader.getSystemClassLoader();
-        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-        Constructor<Plugin> pconstructor = pclass.getConstructor();
-        Plugin p = pconstructor.newInstance();
+        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.P.PPlugin");
+        Method m = pclass.getMethods()[0];
+        System.out.println(m.getName());
+        Constructor<PPlugin> pconstructor = pclass.getConstructor();
+        PPlugin p = pconstructor.newInstance();
         System.out.println(p.sqrt(2));
+
+//
 
 
 
