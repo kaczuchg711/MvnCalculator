@@ -1,0 +1,20 @@
+CHANGELOG - ARTUR HAŁAT,TOMASZ KACZA         TO
+
+
+brach master - orginal MVN Calcuator 
+
+
+branch devArt:
+[* 18.11.2019 *]
+Quick description of changes:
+	Add Simple Example of Abstract fabric, All interfaces and classes divided to separate modules - build by maven
+elements of program:
+	->2 interfaces - AbstractFabric and AbstractProduct
+	->ConcreatFactory and ConcreatProduct - folders that contains 3 classes each
+	->class customer that defines what kind of product we want to produce
+	->main that allows us to see that Fabric works
+
+
+
+bramch devT
+[* 19.11.2019 *]
