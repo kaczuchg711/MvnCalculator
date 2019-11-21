@@ -8,4 +8,3 @@ public interface ICalculator
     public double division(double a, double b);
     public void run(ICalculator cal);
 }
-
