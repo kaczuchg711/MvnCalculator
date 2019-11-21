@@ -1,7 +1,7 @@
 CHANGELOG - ARTUR HAŁAT,TOMASZ KACZA         TO
 
 
-brach master - orginal MVN Calcuator 
+branch master - original MVN Calculator
     ->In Interface module is interface IIICalculator
     ->In Implementation module is class CCCalculator
     ->In Common module Main
@@ -21,5 +21,13 @@ elements of program:
 
 branch devT
 [* 19.11.2019 *]
-    Quick description of changes:
-    	start using sqrt as a method
+### Changed
+    start using sqrt as a method in main
+
+branch master
+[* 21.11.2019 *]
+### Added
+    Module Main to run application
+    interfaces to Common module
+### Removed
+    remove Module Interfaces
