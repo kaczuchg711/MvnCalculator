@@ -1,12 +1,10 @@
 package pl.c0.kaczuch.calculator;
 
-import pl.c0.kaczuch.calculator.Plugin;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Scanner;
 
-public class CCCalculator implements IIICalculator
+public class Calculator implements ICalculator
 {
     @Override
     public double add(double a, double b)
@@ -42,7 +40,7 @@ public class CCCalculator implements IIICalculator
     }
 
     @Override
-    public void run(IIICalculator cal)
+    public void run(ICalculator cal)
     {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         boolean exit = false;

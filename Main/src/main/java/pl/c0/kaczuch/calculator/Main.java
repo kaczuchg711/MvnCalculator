@@ -1,13 +1,9 @@
 package pl.c0.kaczuch.calculator;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.Calendar;
-import java.util.Scanner;
 
 public class Main
 {
@@ -39,14 +35,12 @@ public class Main
 //        System.out.println(mysqrt.);
 
 
-//        w main
+//      in main from
         ClassLoader cl = ClassLoader.getSystemClassLoader();
         Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
         Constructor<Plugin> pconstructor = pclass.getConstructor();
         Plugin p = pconstructor.newInstance();
         System.out.println(p.sqrt(2));
-
-
 
 
     }
