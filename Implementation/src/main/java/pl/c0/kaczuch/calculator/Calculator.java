@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Scanner;
 
-public class Calculator implements ICalculator
+public class Calculator implements IICalculator
 {
     @Override
     public double add(double a, double b)
@@ -40,7 +40,7 @@ public class Calculator implements ICalculator
     }
 
     @Override
-    public void run(ICalculator cal)
+    public void run(IICalculator cal)
     {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         boolean exit = false;
