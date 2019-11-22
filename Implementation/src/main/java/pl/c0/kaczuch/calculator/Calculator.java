@@ -10,6 +10,8 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class Calculator implements IICalculator
 {
     @Override
@@ -48,7 +50,7 @@ public class Calculator implements IICalculator
 //        return p.sqrt(a);
 
 
-            File df = new File("../Plugin_outside_the_project/");
+            File df = new File("Plugin_outside_the_project/target/classes");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
@@ -62,16 +64,13 @@ public class Calculator implements IICalculator
             }
 
 //            System.out.println(cls.desiredAssertionStatus());
-//                                                     i have to add String.class becouse throw nosuchmethodexception
-            Constructor <IPlugin>pconstructor = cls.getConstructor(String.class);
+//                                         i have to add String.class becouse throw nosuchmethodexception
+            Constructor<IPlugin> pconstructor = cls.getConstructor(String.class);
 
 //           for IllegalAccessException
             pconstructor.setAccessible(true);
 
             IPlugin p = pconstructor.newInstance("hej");
-
-
-
 
             return p.sqrt(a);
 
@@ -83,6 +82,7 @@ public class Calculator implements IICalculator
                 System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
             }
             System.out.println(e);
+            exit(1);
         }
         return 1;
     }
@@ -104,17 +104,21 @@ public class Calculator implements IICalculator
             System.out.println("input b:");
             int b = sc.nextInt();
 
+            System.out.println("0.exit");
             System.out.println("1.add");
             System.out.println("2.subtraction");
             System.out.println("3.multiplication");
             System.out.println("4.division");
-            System.out.println("5.exit");
+
 
 
             int choice = sc.nextInt();  // Read user input
 
             switch (choice)
             {
+                case 0:
+                    exit = true;
+                    break;
                 case 1:
                     result = cal.add(a, b);
                     System.out.println(result);
@@ -131,8 +135,7 @@ public class Calculator implements IICalculator
                     result = cal.division(a, b);
                     System.out.println(result);
                     break;
-                case 5:
-                    exit = true;
+
             }
 
         }
