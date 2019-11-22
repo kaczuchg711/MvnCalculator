@@ -31,3 +31,10 @@ branch master
     interfaces to Common module
 ### Removed
     remove Module Interfaces
+
+branch master
+[* 22.11.2019 *]
+### Added
+    Plugin_outside_the_project class with only common Common module
+    In calculator.java add dynamic loaded Pluginotp
+    Plugin.sh start project with this plugin
