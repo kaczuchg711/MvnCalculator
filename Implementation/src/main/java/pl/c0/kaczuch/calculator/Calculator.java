@@ -5,6 +5,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Scanner;
@@ -52,11 +53,35 @@ public class Calculator implements IICalculator
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Pluginotp");
-            
+
+            Method m[] = cls.getDeclaredMethods();
+            for (Method x : m
+            )
+            {
+                System.out.println(x);
+            }
+
+//            System.out.println(cls.desiredAssertionStatus());
+//                                                     i have to add String.class becouse throw nosuchmethodexception
+            Constructor <IPlugin>pconstructor = cls.getConstructor(String.class);
+
+//           for IllegalAccessException
+            pconstructor.setAccessible(true);
+
+            IPlugin p = pconstructor.newInstance("hej");
+
+
+
+
+            return p.sqrt(a);
+
         }
         catch (Exception e)
         {
-            System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
+            for (int i = 0; i < 4; i++)
+            {
+                System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
+            }
             System.out.println(e);
         }
         return 1;

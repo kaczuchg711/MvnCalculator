@@ -43,7 +43,7 @@ public class Main
 //        System.out.println(p.sqrt(2));
 
         IICalculator cal = new Calculator();
-        cal.sqrt(1);
+        System.out.println(   cal.sqrt(4));
 
 
 
