@@ -1,7 +1,12 @@
 package pl.c0.kaczuch.calculator;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.Scanner;
 
 public class Calculator implements IICalculator
@@ -30,13 +35,31 @@ public class Calculator implements IICalculator
         return a / b;
     }
 
-    public double sqrt(double a) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException
+    public double sqrt(double a)
     {
-        ClassLoader cl = ClassLoader.getSystemClassLoader();
-        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-        Constructor<Plugin> pconstructor = pclass.getConstructor();
-        Plugin p = pconstructor.newInstance();
-        return p.sqrt(a);
+        try
+        {
+//            ClassLoader cl = ClassLoader.getSystemClassLoader();
+//        from file in package
+//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
+//        Constructor<Plugin> pconstructor = pclass.getConstructor();
+//        Plugin p = pconstructor.newInstance();
+//        return p.sqrt(a);
+
+
+            File df = new File("../Plugin_outside_the_project/");
+            URL url = df.toURI().toURL();
+            URL[] urls = new URL[]{url};
+            ClassLoader cl = new URLClassLoader(urls);
+            Class cls = cl.loadClass("Pluginotp");
+            
+        }
+        catch (Exception e)
+        {
+            System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
+            System.out.println(e);
+        }
+        return 1;
     }
 
     @Override
@@ -68,19 +91,19 @@ public class Calculator implements IICalculator
             switch (choice)
             {
                 case 1:
-                    result = cal.add(a,b);
+                    result = cal.add(a, b);
                     System.out.println(result);
                     break;
                 case 2:
-                    result = cal.subtraction(a,b);
+                    result = cal.subtraction(a, b);
                     System.out.println(result);
                     break;
                 case 3:
-                    result = cal.multiplication(a,b);
+                    result = cal.multiplication(a, b);
                     System.out.println(result);
                     break;
                 case 4:
-                    result = cal.division(a,b);
+                    result = cal.division(a, b);
                     System.out.println(result);
                     break;
                 case 5:

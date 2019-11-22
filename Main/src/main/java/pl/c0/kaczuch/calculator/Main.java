@@ -36,11 +36,15 @@ public class Main
 
 
 //      in main from
-        ClassLoader cl = ClassLoader.getSystemClassLoader();
-        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-        Constructor<Plugin> pconstructor = pclass.getConstructor();
-        Plugin p = pconstructor.newInstance();
-        System.out.println(p.sqrt(2));
+//        ClassLoader cl = ClassLoader.getSystemClassLoader();
+//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
+//        Constructor<Plugin> pconstructor = pclass.getConstructor();
+//        Plugin p = pconstructor.newInstance();
+//        System.out.println(p.sqrt(2));
+
+        IICalculator cal = new Calculator();
+        cal.sqrt(1);
+
 
 
     }

@@ -1,6 +1,6 @@
 package pl.c0.kaczuch.calculator;
 
-public interface IICalculator
+public interface IICalculator extends IPlugin
 {
     public double add(double a, double b);
     public double subtraction(double a, double b);
