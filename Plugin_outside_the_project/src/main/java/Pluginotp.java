@@ -8,7 +8,15 @@ class Pluginotp implements IPlugin
         System.out.println("Pluginotp Constructor");
     }
 
-    public double sqrt(double a)
+    public double sqrtDouble(double a)
+    {
+        return Math.sqrt(a);
+    }
+    public float sqrtFloat(float a)
+    {
+        return Math.sqrt(a);
+    }
+    public int sqrtInt(int a)
     {
         return Math.sqrt(a);
     }

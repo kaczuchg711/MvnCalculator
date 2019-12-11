@@ -15,12 +15,17 @@
         <module>Plugin</module>
         <module>Implementation</module>
         <module>Common</module>
+        <module>AbstractFactory</module>
+        <module>AbstractProduct</module>
+        <module>ConcreatProduct</module>
+        <module>ConcreatFactory</module>
+        <module>Customer</module>
         <module>Main</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
 
