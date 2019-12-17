@@ -78,7 +78,7 @@ public class ConcreatProductDouble implements AbstractProductCalculator {
                     substraction();
                     break;
                 case 3:
-                    division();
+                    multiplication();
                     break;
                 case 4:
                     division();

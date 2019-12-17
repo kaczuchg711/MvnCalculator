@@ -5,7 +5,8 @@ import pl.c0.kaczuch.calculator.Calculator;
 import pl.c0.kaczuch.calculator.IICalculator;
 
 import java.util.Scanner;
-public class ConcreatProductInt implements AbstractProductCalculator {
+public class ConcreatProductInt implements AbstractProductCalculator
+{
     IICalculator calculus=new Calculator();
     @Override
     public void addition(){
@@ -77,7 +78,7 @@ public class ConcreatProductInt implements AbstractProductCalculator {
                     substraction();
                     break;
                 case 3:
-                    division();
+                    multiplication();
                     break;
                 case 4:
                     division();
