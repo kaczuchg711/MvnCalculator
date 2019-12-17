@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 import static java.lang.System.exit;
 
-public class Calculator implements IICalculator
+        public class Calculator implements IICalculator
 {
     @Override
     public double add(double a, double b)
@@ -139,6 +139,12 @@ public class Calculator implements IICalculator
             }
 
         }
+    }
+
+    @Override
+    public void hi()
+    {
+        System.out.println("siema");
     }
 
 }

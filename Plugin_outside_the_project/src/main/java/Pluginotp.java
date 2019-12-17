@@ -12,4 +12,8 @@ class Pluginotp implements IPlugin
     {
         return Math.sqrt(a);
     }
+    public  void hi()
+    {
+        System.out.println("siemanko");
+    }
 }

@@ -7,5 +7,6 @@ public interface IICalculator extends IPlugin
     public double multiplication(double a, double b);
     public double division(double a, double b);
     public void run(IICalculator cal);
+    public void hi();
 }
 

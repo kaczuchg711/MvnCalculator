@@ -5,4 +5,6 @@ import java.lang.reflect.InvocationTargetException;
 public interface IPlugin
 {
     public double sqrt(double a);
+
+    public  void hi();
 }
