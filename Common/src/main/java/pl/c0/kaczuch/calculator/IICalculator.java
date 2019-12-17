@@ -16,6 +16,11 @@ public interface IICalculator extends IPlugin
     public int subtractionInt(int a, int b);
     public int multiplicationInt(int a, int b);
     public int divisionInt(int a, int b);
+
+    public double sqrtDouble(double a);
+    public float sqrtFloat(float a);
+    public int sqrtInt(int a);
+
     public void run(IICalculator cal);
 }
 

@@ -12,7 +12,6 @@
 
 
     <modules>
-        <module>Plugin</module>
         <module>Implementation</module>
         <module>Common</module>
         <module>AbstractFactory</module>

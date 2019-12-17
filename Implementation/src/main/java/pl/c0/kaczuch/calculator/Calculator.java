@@ -11,6 +11,7 @@ import java.net.URLClassLoader;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
+import static java.lang.System.setOut;
 
 public class Calculator implements IICalculator
 {
@@ -90,17 +91,17 @@ public class Calculator implements IICalculator
 //        return p.sqrt(a);
 
 
-            File df = new File("Plugin_outside_the_project/target/classes");
+            File df = new File("Plugin_outside_the_project\\target\\classes");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Pluginotp");
 
             Method m[] = cls.getDeclaredMethods();
-            for (Method x : m
+            for (int i=0;i<m.length;i++
             )
             {
-                System.out.println(x);
+                System.out.println(m[i]);
             }
 
 //            System.out.println(cls.desiredAssertionStatus());
@@ -111,8 +112,9 @@ public class Calculator implements IICalculator
             pconstructor.setAccessible(true);
 
             IPlugin p = pconstructor.newInstance("hej");
-
+            //System.out.println(p.sqrtDouble(5));
             return p.sqrtDouble(a);
+            //return p.sqrtDouble(a);
 
         }
         catch (Exception e)
@@ -139,7 +141,7 @@ public class Calculator implements IICalculator
 //        return p.sqrt(a);
 
 
-            File df = new File("Plugin_outside_the_project/target/classes");
+            File df = new File("Plugin_outside_the_project\\target\\classes");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
@@ -188,7 +190,7 @@ public class Calculator implements IICalculator
 //        return p.sqrt(a);
 
 
-            File df = new File("Plugin_outside_the_project/target/classes");
+            File df = new File("Plugin_outside_the_project\\target\\classes");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);

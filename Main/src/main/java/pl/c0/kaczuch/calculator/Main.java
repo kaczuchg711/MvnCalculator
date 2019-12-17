@@ -15,7 +15,8 @@ public class Main
         AbstractFactoryCalculator Two = new ConcreatFactoryFloat();
         AbstractFactoryCalculator Three = new ConcreatFactoryInt();
 
-        One.create().run();
+        Two.create().run();
+
 
     }
 }
