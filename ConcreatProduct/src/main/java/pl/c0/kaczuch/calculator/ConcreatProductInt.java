@@ -5,51 +5,58 @@ import pl.c0.kaczuch.calculator.Calculator;
 import pl.c0.kaczuch.calculator.IICalculator;
 
 import java.util.Scanner;
+
 public class ConcreatProductInt implements AbstractProductCalculator
 {
-    IICalculator calculus=new Calculator();
+    IICalculator calculus = new Calculator();
+
     @Override
-    public void addition(){
+    public void addition()
+    {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         System.out.println("input a:");
         int a = sc.nextInt();
         System.out.println("input b:");
         int b = sc.nextInt();
-        System.out.println( calculus.addInt(a,b));
+        System.out.println(calculus.addInt(a, b));
     }
 
     @Override
-    public void substraction(){
+    public void substraction()
+    {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         System.out.println("input a:");
         int a = sc.nextInt();
         System.out.println("input b:");
         int b = sc.nextInt();
-        System.out.println( calculus.subtractionInt(a,b));
+        System.out.println(calculus.subtractionInt(a, b));
     }
 
     @Override
-    public void multiplication(){
+    public void multiplication()
+    {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         System.out.println("input a:");
         int a = sc.nextInt();
         System.out.println("input b:");
         int b = sc.nextInt();
-        System.out.println( calculus.multiplicationInt(a,b));
+        System.out.println(calculus.multiplicationInt(a, b));
     }
 
     @Override
-    public void division(){
+    public void sqrt()
+    {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         System.out.println("input a:");
         int a = sc.nextInt();
         System.out.println("input b:");
         int b = sc.nextInt();
-        System.out.println( calculus.sqrtInt(a));
+        System.out.println(calculus.sqrtInt(a));
     }
 
     @Override
-    public void run() {
+    public void run()
+    {
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         boolean exit = false;
         while (!exit)
@@ -60,8 +67,7 @@ public class ConcreatProductInt implements AbstractProductCalculator
             System.out.println("1.add");
             System.out.println("2.subtraction");
             System.out.println("3.multiplication");
-            System.out.println("4.division");
-
+            System.out.println("4.sqrt");
 
 
             int choice = sc.nextInt();  // Read user input
@@ -81,7 +87,7 @@ public class ConcreatProductInt implements AbstractProductCalculator
                     multiplication();
                     break;
                 case 4:
-                    division();
+                    sqrt();
                     break;
 
             }

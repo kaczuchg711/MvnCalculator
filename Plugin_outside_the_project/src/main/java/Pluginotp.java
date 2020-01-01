@@ -5,7 +5,7 @@ class Pluginotp implements IPlugin
 {
     public Pluginotp(String a)
     {
-        System.out.println("Pluginotp Constructor new");
+
     }
 
     public int sqrtInt(int a)

@@ -20,11 +20,13 @@ public class Calculator implements IICalculator
     {
         return a + b;
     }
+
     @Override
     public float addFloat(float a, float b)
     {
         return a + b;
     }
+
     @Override
     public int addInt(int a, int b)
     {
@@ -36,11 +38,13 @@ public class Calculator implements IICalculator
     {
         return a - b;
     }
+
     @Override
     public float subtractionFloat(float a, float b)
     {
         return a - b;
     }
+
     @Override
     public int subtractionInt(int a, int b)
     {
@@ -52,11 +56,13 @@ public class Calculator implements IICalculator
     {
         return a * b;
     }
+
     @Override
     public float multiplicationFloat(float a, float b)
     {
         return a * b;
     }
+
     @Override
     public int multiplicationInt(int a, int b)
     {
@@ -68,11 +74,13 @@ public class Calculator implements IICalculator
     {
         return a / b;
     }
+
     @Override
     public float divisionFloat(float a, float b)
     {
         return a / b;
     }
+
     @Override
     public int divisionInt(int a, int b)
     {
@@ -83,26 +91,13 @@ public class Calculator implements IICalculator
     {
         try
         {
-//            ClassLoader cl = ClassLoader.getSystemClassLoader();
-//        from file in package
-//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-//        Constructor<Plugin> pconstructor = pclass.getConstructor();
-//        Plugin p = pconstructor.newInstance();
-//        return p.sqrt(a);
 
-
-            File df = new File("Plugin_outside_the_project\\target\\classes");
+            File df = new File("Plugin_outside_the_project/target/classes");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Pluginotp");
 
-            Method m[] = cls.getDeclaredMethods();
-            for (int i=0;i<m.length;i++
-            )
-            {
-                System.out.println(m[i]);
-            }
 
 //            System.out.println(cls.desiredAssertionStatus());
 //                                         i have to add String.class becouse throw nosuchmethodexception
@@ -112,9 +107,7 @@ public class Calculator implements IICalculator
             pconstructor.setAccessible(true);
 
             IPlugin p = pconstructor.newInstance("hej");
-            //System.out.println(p.sqrtDouble(5));
             return p.sqrtDouble(a);
-            //return p.sqrtDouble(a);
 
         }
         catch (Exception e)
@@ -133,13 +126,6 @@ public class Calculator implements IICalculator
     {
         try
         {
-//            ClassLoader cl = ClassLoader.getSystemClassLoader();
-//        from file in package
-//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-//        Constructor<Plugin> pconstructor = pclass.getConstructor();
-//        Plugin p = pconstructor.newInstance();
-//        return p.sqrt(a);
-
 
             File df = new File("Plugin_outside_the_project\\target\\classes");
             URL url = df.toURI().toURL();
@@ -182,13 +168,6 @@ public class Calculator implements IICalculator
     {
         try
         {
-//            ClassLoader cl = ClassLoader.getSystemClassLoader();
-//        from file in package
-//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-//        Constructor<Plugin> pconstructor = pclass.getConstructor();
-//        Plugin p = pconstructor.newInstance();
-//        return p.sqrt(a);
-
 
             File df = new File("Plugin_outside_the_project\\target\\classes");
             URL url = df.toURI().toURL();
@@ -203,8 +182,7 @@ public class Calculator implements IICalculator
                 System.out.println(x);
             }
 
-//            System.out.println(cls.desiredAssertionStatus());
-//                                         i have to add String.class becouse throw nosuchmethodexception
+            //                 i have to add String.class becouse throw nosuchmethodexception
             Constructor<IPlugin> pconstructor = cls.getConstructor(String.class);
 
 //           for IllegalAccessException

@@ -39,7 +39,7 @@ public class ConcreatProductDouble implements AbstractProductCalculator {
     }
 
     @Override
-    public void division(){
+    public void sqrt(){
         Scanner sc = new Scanner(System.in);  // Create a Scanner object
         System.out.println("input a:");
         double a = sc.nextDouble();
@@ -60,7 +60,7 @@ public class ConcreatProductDouble implements AbstractProductCalculator {
             System.out.println("1.add");
             System.out.println("2.subtraction");
             System.out.println("3.multiplication");
-            System.out.println("4.division");
+            System.out.println("4.sqrt");
 
 
 
@@ -81,7 +81,7 @@ public class ConcreatProductDouble implements AbstractProductCalculator {
                     multiplication();
                     break;
                 case 4:
-                    division();
+                    sqrt();
                     break;
 
             }
