@@ -2,10 +2,8 @@ package pl.c0.kaczuch.calculator;
 
 
 public interface AbstractProductCalculator {
-    public void addition();
-    public void substraction();
-    public void multiplication();
-    public void sqrt();
-    public void run();
-
+    public void addition(double a,double b);
+    public void substraction(double a,double b);
+    public void multiplication(double a,double b);
+    public void sqrt(double a);
 }

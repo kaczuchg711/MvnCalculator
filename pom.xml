@@ -20,6 +20,9 @@
         <module>ConcreatFactory</module>
         <module>Customer</module>
         <module>Main</module>
+        <module>MVC/View</module>
+        <module>MVC/Controller</module>
+        <module>MVC/Model</module>
     </modules>
 
     <properties>
