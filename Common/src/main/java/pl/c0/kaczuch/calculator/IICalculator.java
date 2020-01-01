@@ -2,10 +2,25 @@ package pl.c0.kaczuch.calculator;
 
 public interface IICalculator extends IPlugin
 {
-    public double add(double a, double b);
-    public double subtraction(double a, double b);
-    public double multiplication(double a, double b);
-    public double division(double a, double b);
+    public double addDouble(double a, double b);
+    public double subtractionDouble(double a, double b);
+    public double multiplicationDouble(double a, double b);
+    public double divisionDouble(double a, double b);
+
+    public float addFloat(float a, float b);
+    public float subtractionFloat(float a, float b);
+    public float multiplicationFloat(float a, float b);
+    public float divisionFloat(float a, float b);
+
+    public int addInt(int a, int b);
+    public int subtractionInt(int a, int b);
+    public int multiplicationInt(int a, int b);
+    public int divisionInt(int a, int b);
+
+    public double sqrtDouble(double a);
+    public float sqrtFloat(float a);
+    public int sqrtInt(int a);
+
     public void run(IICalculator cal);
     public void hi();
 }

@@ -11,46 +11,123 @@ import java.net.URLClassLoader;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
+import static java.lang.System.setOut;
 
         public class Calculator implements IICalculator
 {
     @Override
-    public double add(double a, double b)
+    public double addDouble(double a, double b)
     {
         return a + b;
     }
 
     @Override
-    public double subtraction(double a, double b)
+    public float addFloat(float a, float b)
+    {
+        return a + b;
+    }
+
+    @Override
+    public int addInt(int a, int b)
+    {
+        return a + b;
+    }
+
+    @Override
+    public double subtractionDouble(double a, double b)
     {
         return a - b;
     }
 
     @Override
-    public double multiplication(double a, double b)
+    public float subtractionFloat(float a, float b)
+    {
+        return a - b;
+    }
+
+    @Override
+    public int subtractionInt(int a, int b)
+    {
+        return a - b;
+    }
+
+    @Override
+    public double multiplicationDouble(double a, double b)
     {
         return a * b;
     }
 
     @Override
-    public double division(double a, double b)
+    public float multiplicationFloat(float a, float b)
+    {
+        return a * b;
+    }
+
+    @Override
+    public int multiplicationInt(int a, int b)
+    {
+        return a * b;
+    }
+
+    @Override
+    public double divisionDouble(double a, double b)
     {
         return a / b;
     }
 
-    public double sqrt(double a)
+    @Override
+    public float divisionFloat(float a, float b)
+    {
+        return a / b;
+    }
+
+    @Override
+    public int divisionInt(int a, int b)
+    {
+        return a / b;
+    }
+
+    public double sqrtDouble(double a)
     {
         try
         {
-//            ClassLoader cl = ClassLoader.getSystemClassLoader();
-//        from file in package
-//        Class pclass = cl.loadClass("pl.c0.kaczuch.calculator.Plugin");
-//        Constructor<Plugin> pconstructor = pclass.getConstructor();
-//        Plugin p = pconstructor.newInstance();
-//        return p.sqrt(a);
-
 
             File df = new File("Plugin_outside_the_project/target/classes");
+            URL url = df.toURI().toURL();
+            URL[] urls = new URL[]{url};
+            ClassLoader cl = new URLClassLoader(urls);
+            Class cls = cl.loadClass("Pluginotp");
+
+
+//            System.out.println(cls.desiredAssertionStatus());
+//                                         i have to add String.class becouse throw nosuchmethodexception
+            Constructor<IPlugin> pconstructor = cls.getConstructor(String.class);
+
+//           for IllegalAccessException
+            pconstructor.setAccessible(true);
+
+            IPlugin p = pconstructor.newInstance("hej");
+            return p.sqrtDouble(a);
+
+        }
+        catch (Exception e)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
+            }
+            System.out.println(e);
+            exit(1);
+        }
+        return 1;
+    }
+
+    public float sqrtFloat(float a)
+    {
+        try
+        {
+
+            File df = new File("Plugin_outside_the_project\\target\\classes");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
             ClassLoader cl = new URLClassLoader(urls);
@@ -72,7 +149,48 @@ import static java.lang.System.exit;
 
             IPlugin p = pconstructor.newInstance("hej");
 
-            return p.sqrt(a);
+            return p.sqrtFloat(a);
+
+        }
+        catch (Exception e)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
+            }
+            System.out.println(e);
+            exit(1);
+        }
+        return 1;
+    }
+
+    public int sqrtInt(int a)
+    {
+        try
+        {
+
+            File df = new File("Plugin_outside_the_project\\target\\classes");
+            URL url = df.toURI().toURL();
+            URL[] urls = new URL[]{url};
+            ClassLoader cl = new URLClassLoader(urls);
+            Class cls = cl.loadClass("Pluginotp");
+
+            Method m[] = cls.getDeclaredMethods();
+            for (Method x : m
+            )
+            {
+                System.out.println(x);
+            }
+
+            //                 i have to add String.class becouse throw nosuchmethodexception
+            Constructor<IPlugin> pconstructor = cls.getConstructor(String.class);
+
+//           for IllegalAccessException
+            pconstructor.setAccessible(true);
+
+            IPlugin p = pconstructor.newInstance("hej");
+
+            return p.sqrtInt(a);
 
         }
         catch (Exception e)
@@ -90,7 +208,7 @@ import static java.lang.System.exit;
     @Override
     public void run(IICalculator cal)
     {
-        Scanner sc = new Scanner(System.in);  // Create a Scanner object
+        /*Scanner sc = new Scanner(System.in);  // Create a Scanner object
         boolean exit = false;
         double result = 0;
         while (!exit)
@@ -138,7 +256,7 @@ import static java.lang.System.exit;
 
             }
 
-        }
+        }*/
     }
 
     @Override
