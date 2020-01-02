@@ -19,7 +19,6 @@ public class Main
 //
 //        AbstractProductCalculator cal = Two.create();
 
-
         CalculatorView cv = new CalculatorView();
 
         cv.setVisible(true);
