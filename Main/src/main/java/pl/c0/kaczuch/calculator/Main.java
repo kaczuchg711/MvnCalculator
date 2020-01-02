@@ -20,6 +20,8 @@ public class Main
 //        AbstractProductCalculator cal = Two.create();
 
         CalculatorView cv = new CalculatorView();
+        CalculatorModelFacade cm = new CalculatorModelFacade();
+
 
         cv.setVisible(true);
 

@@ -12,29 +12,27 @@ public class ConcreatProductDouble implements AbstractProductCalculator
     IICalculator calculus = new Calculator();
 
     @Override
-    public void addition(double a,double b)
+    public double addition(double a,double b)
     {
-        System.out.println(calculus.addDouble(a, b));
+        return calculus.addDouble(a, b);
     }
 
     @Override
-    public void substraction(double a,double b)
+    public double subtraction(double a,double b)
     {
-
-        System.out.println(calculus.subtractionDouble(a, b));
+        return calculus.subtractionDouble(a, b);
     }
 
     @Override
-    public void multiplication(double a,double b)
+    public double multiplication(double a,double b)
     {
-
-        System.out.println(calculus.multiplicationDouble(a, b));
+        return calculus.multiplicationDouble(a, b);
     }
 
     @Override
-    public void sqrt(double a)
+    public double sqrt(double a)
     {
-        System.out.println(calculus.sqrtDouble(a));
+        return calculus.sqrtDouble(a);
     }
 
 
