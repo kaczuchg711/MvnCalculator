@@ -38,3 +38,10 @@ branch master
     Plugin_outside_the_project class with only common Common module
     In calculator.java add dynamic loaded Pluginotp
     Plugin.sh start project with this plugin
+
+branch master
+[* 02.01.2020 *]
+### Added
+    MVC
+### Changed
+    Fabryka
