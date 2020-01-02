@@ -7,7 +7,6 @@ public class CalculatorModelFacade
     public CalculatorModelFacade()
     {
         AbstractFactoryCalculator factory = new ConcreatFactoryDouble();
-
         this.calculator = factory.create();
     }
 

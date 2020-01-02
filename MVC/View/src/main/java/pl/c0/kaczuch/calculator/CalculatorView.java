@@ -51,6 +51,11 @@ public class CalculatorView extends JFrame
             {
                 return tf1;
             }
+
+            public JTextField getTf2()
+            {
+                return tf2;
+            }
         }
 
         static private class ButtonsPanel extends JPanel
@@ -181,9 +186,14 @@ public class CalculatorView extends JFrame
         return panel;
     }
 
-    public String getInput()
+    public String getInput1()
     {
         return this.getPanel().getIp().getTf1().getText();
+    }
+
+    public String getInput2()
+    {
+        return this.getPanel().getIp().getTf2().getText();
     }
 
     public void setResult(double result)
