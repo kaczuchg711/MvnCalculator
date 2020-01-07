@@ -1,0 +1,47 @@
+CHANGELOG - ARTUR HAŁAT,TOMASZ KACZA         TO
+
+
+branch master - original MVN Calculator
+    ->In Interface module is interface IIICalculator
+    ->In Implementation module is class CCCalculator
+    ->In Common module Main
+    ->In Plugin Module class Plugin with additional method sqrt
+
+branch devArt:
+[* 18.11.2019 *]
+Quick description of changes:
+	Add Simple Example of Abstract fabric, All interfaces and classes divided to separate modules - build by maven
+elements of program:
+	->2 interfaces - AbstractFabric and AbstractProduct
+	->ConcreatFactory and ConcreatProduct - folders that contains 3 classes each
+	->class customer that defines what kind of product we want to produce
+	->main that allows us to see that Fabric works
+
+
+
+branch devT
+[* 19.11.2019 *]
+### Changed
+    start using sqrt as a method in main
+
+branch master
+[* 21.11.2019 *]
+### Added
+    Module Main to run application
+    interfaces to Common module
+### Removed
+    remove Module Interfaces
+
+branch master
+[* 22.11.2019 *]
+### Added
+    Plugin_outside_the_project class with only common Common module
+    In calculator.java add dynamic loaded Pluginotp
+    Plugin.sh start project with this plugin
+
+branch master
+[* 02.01.2020 *]
+### Added
+    MVC
+### Changed
+    Fabryka
