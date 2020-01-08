@@ -5,11 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
+import org.slf4j.LoggerFactory;
 public class CalculatorController
 {
     private CalculatorModelFacade model;
     private CalculatorView view;
+    private static final Logger log = (Logger) LoggerFactory.getLogger(CalculatorController.class);
 
     public CalculatorController(CalculatorModelFacade model, CalculatorView view)
     {
@@ -67,6 +70,8 @@ public class CalculatorController
             }
             catch (Exception e1)
             {
+                log.setLevel(Level.INFO);
+                log.error(e1.getMessage(),CalculatorController.class.getSimpleName());
                 view.displayErrorMessage("You need to enter a number");
             }
         }

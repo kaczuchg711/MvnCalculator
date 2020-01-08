@@ -1,5 +1,6 @@
 package pl.c0.kaczuch.calculator;
 
+import org.slf4j.Marker;
 import org.w3c.dom.ls.LSOutput;
 
 import java.io.File;
@@ -12,9 +13,14 @@ import java.util.Scanner;
 
 import static java.lang.System.exit;
 import static java.lang.System.setOut;
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
+import org.slf4j.LoggerFactory;
 
         public class Calculator implements IICalculator
 {
+    private static final Logger log = (Logger) LoggerFactory.getLogger(Calculator.class);
+
     @Override
     public double addDouble(double a, double b)
     {
@@ -91,22 +97,25 @@ import static java.lang.System.setOut;
     {
         try
         {
-
+            log.setLevel(Level.INFO);
             File df = new File("Plugin_outside_the_project/target/classes");
+            log.info("Plugin in file-pathname ok");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
+            log.info("url ok");
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Pluginotp");
-
+            log.info("classloader ok");
 
 //            System.out.println(cls.desiredAssertionStatus());
 //                                         i have to add String.class becouse throw nosuchmethodexception
             Constructor<IPlugin> pconstructor = cls.getConstructor(String.class);
-
+            log.info("constructor of plugin done");
 //           for IllegalAccessException
             pconstructor.setAccessible(true);
 
             IPlugin p = pconstructor.newInstance("hej");
+            log.info("plugin done");
             return p.sqrtDouble(a);
 
         }
@@ -117,6 +126,7 @@ import static java.lang.System.setOut;
                 System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
             }
             System.out.println(e);
+            log.error(e.getMessage(),Calculator.class.getSimpleName());
             exit(1);
         }
         return 1;
@@ -126,13 +136,15 @@ import static java.lang.System.setOut;
     {
         try
         {
-
+            log.setLevel(Level.INFO);
             File df = new File("Plugin_outside_the_project\\target\\classes");
+            log.info("Plugin in file-pathname ok");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
+            log.info("url ok");
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Pluginotp");
-
+            log.info("classloader ok");
             Method m[] = cls.getDeclaredMethods();
             for (Method x : m
             )
@@ -148,7 +160,7 @@ import static java.lang.System.setOut;
             pconstructor.setAccessible(true);
 
             IPlugin p = pconstructor.newInstance("hej");
-
+            log.info("plugin done");
             return p.sqrtFloat(a);
 
         }
@@ -159,6 +171,7 @@ import static java.lang.System.setOut;
                 System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
             }
             System.out.println(e);
+            log.error(e.getMessage(),Calculator.class.getSimpleName());
             exit(1);
         }
         return 1;
@@ -168,13 +181,15 @@ import static java.lang.System.setOut;
     {
         try
         {
-
+            log.setLevel(Level.INFO);
             File df = new File("Plugin_outside_the_project\\target\\classes");
+            log.info("Plugin in file-pathname ok");
             URL url = df.toURI().toURL();
             URL[] urls = new URL[]{url};
+            log.info("url ok");
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Pluginotp");
-
+            log.info("classloader ok");
             Method m[] = cls.getDeclaredMethods();
             for (Method x : m
             )
@@ -184,12 +199,12 @@ import static java.lang.System.setOut;
 
             //                 i have to add String.class becouse throw nosuchmethodexception
             Constructor<IPlugin> pconstructor = cls.getConstructor(String.class);
-
+            log.info("constructor of plugin done");
 //           for IllegalAccessException
             pconstructor.setAccessible(true);
 
             IPlugin p = pconstructor.newInstance("hej");
-
+            log.info("plugin done");
             return p.sqrtInt(a);
 
         }
@@ -200,6 +215,7 @@ import static java.lang.System.setOut;
                 System.out.println("\t\t\t\tWROOOOOOOOOOOOOOOOOOOOOOONG");
             }
             System.out.println(e);
+            log.error(e.getMessage(),Calculator.class.getSimpleName());
             exit(1);
         }
         return 1;
