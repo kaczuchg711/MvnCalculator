@@ -13,8 +13,7 @@ import java.util.Scanner;
 
 import static java.lang.System.exit;
 import static java.lang.System.setOut;
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.Logger;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
         public class Calculator implements IICalculator
@@ -97,7 +96,6 @@ import org.slf4j.LoggerFactory;
     {
         try
         {
-            log.setLevel(Level.INFO);
             File df = new File("Plugin_outside_the_project/target/classes");
             log.info("Plugin in file-pathname ok");
             URL url = df.toURI().toURL();
@@ -136,7 +134,7 @@ import org.slf4j.LoggerFactory;
     {
         try
         {
-            log.setLevel(Level.INFO);
+
             File df = new File("Plugin_outside_the_project\\target\\classes");
             log.info("Plugin in file-pathname ok");
             URL url = df.toURI().toURL();
@@ -181,7 +179,7 @@ import org.slf4j.LoggerFactory;
     {
         try
         {
-            log.setLevel(Level.INFO);
+
             File df = new File("Plugin_outside_the_project\\target\\classes");
             log.info("Plugin in file-pathname ok");
             URL url = df.toURI().toURL();

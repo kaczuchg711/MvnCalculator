@@ -1,12 +1,4 @@
 package pl.c0.kaczuch.calculator;
-
-
-import pl.c0.kaczuch.calculator.Calculator;
-import pl.c0.kaczuch.calculator.IICalculator;
-
-
-import java.util.Scanner;
-
 public class ConcreatProductDouble implements AbstractProductCalculator
 {
     IICalculator calculus = new Calculator();
