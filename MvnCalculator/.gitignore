@@ -3,3 +3,4 @@ target
 test
 *.iml
 .git
+logfile.log

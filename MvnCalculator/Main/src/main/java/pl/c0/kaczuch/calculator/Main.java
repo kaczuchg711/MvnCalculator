@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 public class Main
 {
     /*to co tu robie to moze być ultra glupota, najwyzej to usune*/
-    private static final Logger log = (Logger) LoggerFactory.getLogger(Main.class);
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
     /*to co tu robie to moze być ultra glupota, najwyzej to usune*/
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException

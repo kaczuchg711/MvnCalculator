@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 
         public class Calculator implements IICalculator
 {
-    private static final Logger log = (Logger) LoggerFactory.getLogger(Calculator.class);
+    private static final Logger log = LoggerFactory.getLogger(Calculator.class);
 
     @Override
     public double addDouble(double a, double b)

@@ -11,7 +11,7 @@ public class CalculatorController
 {
     private CalculatorModelFacade model;
     private CalculatorView view;
-    private static final Logger log = (Logger) LoggerFactory.getLogger(CalculatorController.class);
+    private static final Logger log = LoggerFactory.getLogger(CalculatorController.class);
 
     public CalculatorController(CalculatorModelFacade model, CalculatorView view)
     {
